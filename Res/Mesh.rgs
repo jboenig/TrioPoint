@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.Mesh.1 = s 'Mesh Class'
+	{
+		CLSID = s '{AC1B4084-CC50-4ae2-AB56-B4D324FF458A}'
+	}
+	ShapeShifter.Mesh = s 'Mesh Class'
+	{
+		CLSID = s '{AC1B4084-CC50-4ae2-AB56-B4D324FF458A}'
+		CurVer = s 'ShapeShifter.Mesh.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AC1B4084-CC50-4ae2-AB56-B4D324FF458A} = s 'Mesh Class'
+		{
+			ProgID = s 'ShapeShifter.Mesh.1'
+			VersionIndependentProgID = s 'ShapeShifter.Mesh'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingMesh = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

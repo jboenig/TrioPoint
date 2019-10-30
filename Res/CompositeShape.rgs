@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.CompositeShape.1 = s 'CompositeShape Class'
+	{
+		CLSID = s '{29640976-0CDA-4f65-BEF1-985CC523384E}'
+	}
+	ShapeShifter.CompositeShape = s 'CompositeShape Class'
+	{
+		CLSID = s '{29640976-0CDA-4f65-BEF1-985CC523384E}'
+		CurVer = s 'ShapeShifter.CompositeShape.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {29640976-0CDA-4f65-BEF1-985CC523384E} = s 'CompositeShape Class'
+		{
+			ProgID = s 'ShapeShifter.CompositeShape.1'
+			VersionIndependentProgID = s 'ShapeShifter.CompositeShape'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingCompositeShape = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.AxisGuide.1 = s 'AxisGuide Class'
+	{
+		CLSID = s '{41809397-CC02-4bb4-B07C-994F3EDC537B}'
+	}
+	ShapeShifter.AxisGuide = s 'AxisGuide Class'
+	{
+		CLSID = s '{41809397-CC02-4bb4-B07C-994F3EDC537B}'
+		CurVer = s 'ShapeShifter.AxisGuide.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {41809397-CC02-4bb4-B07C-994F3EDC537B} = s 'AxisGuide Class'
+		{
+			ProgID = s 'ShapeShifter.AxisGuide.1'
+			VersionIndependentProgID = s 'ShapeShifter.AxisGuide'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingAxisGuide = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

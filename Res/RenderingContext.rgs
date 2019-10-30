@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.RenderingContext.1 = s 'RenderingContext Class'
+	{
+		CLSID = s '{FA8AC8EA-D96B-40f7-B88E-9226DE050827}'
+	}
+	ShapeShifter.RenderingContext = s 'RenderingContext Class'
+	{
+		CLSID = s '{FA8AC8EA-D96B-40f7-B88E-9226DE050827}'
+		CurVer = s 'ShapeShifter.RenderingContext.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {FA8AC8EA-D96B-40f7-B88E-9226DE050827} = s 'RenderingContext Class'
+		{
+			ProgID = s 'ShapeShifter.RenderingContext.1'
+			VersionIndependentProgID = s 'ShapeShifter.RenderingContext'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingRenderingContext = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

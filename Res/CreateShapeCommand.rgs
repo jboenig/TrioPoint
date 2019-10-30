@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.CreateShapeCommand.1 = s 'CreateShapeCommand Class'
+	{
+		CLSID = s '{DFAA067A-B16C-4b91-8D20-82109D112B92}'
+	}
+	ShapeShifter.CreateShapeCommand = s 'CreateShapeCommand Class'
+	{
+		CLSID = s '{DFAA067A-B16C-4b91-8D20-82109D112B92}'
+		CurVer = s 'ShapeShifter.CreateShapeCommand.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {DFAA067A-B16C-4b91-8D20-82109D112B92} = s 'CreateShapeCommand Class'
+		{
+			ProgID = s 'ShapeShifter.CreateShapeCommand.1'
+			VersionIndependentProgID = s 'ShapeShifter.CreateShapeCommand'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingCreateShapeCommand = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

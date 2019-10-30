@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.TextureFilter.1 = s 'TextureFilter Class'
+	{
+		CLSID = s '{AB5F1EE0-6703-4f44-8624-4201E6EB969B}'
+	}
+	ShapeShifter.TextureFilter = s 'TextureFilter Class'
+	{
+		CLSID = s '{AB5F1EE0-6703-4f44-8624-4201E6EB969B}'
+		CurVer = s 'ShapeShifter.TextureFilter.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AB5F1EE0-6703-4f44-8624-4201E6EB969B} = s 'TextureFilter Class'
+		{
+			ProgID = s 'ShapeShifter.TextureFilter.1'
+			VersionIndependentProgID = s 'ShapeShifter.TextureFilter'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingTextureFilter = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

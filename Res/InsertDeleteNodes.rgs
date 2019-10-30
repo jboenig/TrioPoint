@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.InsertDeleteNodes.1 = s 'InsertDeleteNodes Class'
+	{
+		CLSID = s '{259A4669-88A6-46ba-863C-A0E3663BA448}'
+	}
+	ShapeShifter.InsertDeleteNodes = s 'InsertDeleteNodes Class'
+	{
+		CLSID = s '{259A4669-88A6-46ba-863C-A0E3663BA448}'
+		CurVer = s 'ShapeShifter.InsertDeleteNodes.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {259A4669-88A6-46ba-863C-A0E3663BA448} = s 'InsertDeleteNodes Class'
+		{
+			ProgID = s 'ShapeShifter.InsertDeleteNodes.1'
+			VersionIndependentProgID = s 'ShapeShifter.InsertDeleteNodes'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingInsertDeleteNodes = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

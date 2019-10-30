@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.TriangleFan.1 = s 'TriangleFan Class'
+	{
+		CLSID = s '{705CBD25-B862-4c57-B44B-7FB6F86E0955}'
+	}
+	ShapeShifter.TriangleFan = s 'TriangleFan Class'
+	{
+		CLSID = s '{705CBD25-B862-4c57-B44B-7FB6F86E0955}'
+		CurVer = s 'ShapeShifter.TriangleFan.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {705CBD25-B862-4c57-B44B-7FB6F86E0955} = s 'TriangleFan Class'
+		{
+			ProgID = s 'ShapeShifter.TriangleFan.1'
+			VersionIndependentProgID = s 'ShapeShifter.TriangleFan'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingTriangleFan = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

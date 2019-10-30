@@ -1,0 +1,26 @@
+HKCR
+{
+	ShapeShifter.EnumVisualList.1 = s 'EnumVisualList Class'
+	{
+		CLSID = s '{D5318A39-EDF7-4993-A060-3CCC3C9B0DD1}'
+	}
+	ShapeShifter.EnumVisualList = s 'EnumVisualList Class'
+	{
+		CLSID = s '{D5318A39-EDF7-4993-A060-3CCC3C9B0DD1}'
+		CurVer = s 'ShapeShifter.EnumVisualList.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D5318A39-EDF7-4993-A060-3CCC3C9B0DD1} = s 'EnumVisualList Class'
+		{
+			ProgID = s 'ShapeShifter.EnumVisualList.1'
+			VersionIndependentProgID = s 'ShapeShifter.EnumVisualList'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

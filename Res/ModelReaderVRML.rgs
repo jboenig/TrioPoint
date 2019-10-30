@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.ModelReaderVRML.1 = s 'ModelReaderVRML Class'
+	{
+		CLSID = s '{594DD742-97DD-4a19-B788-E76F4D5F9844}'
+	}
+	ShapeShifter.ModelReaderVRML = s 'ModelReaderVRML Class'
+	{
+		CLSID = s '{594DD742-97DD-4a19-B788-E76F4D5F9844}'
+		CurVer = s 'ShapeShifter.ModelReaderVRML.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {594DD742-97DD-4a19-B788-E76F4D5F9844} = s 'ModelReaderVRML Class'
+		{
+			ProgID = s 'ShapeShifter.ModelReaderVRML.1'
+			VersionIndependentProgID = s 'ShapeShifter.ModelReaderVRML'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModelReaderVRML = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

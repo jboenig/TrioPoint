@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.MeasurementScale.1 = s 'MeasurementScale Class'
+	{
+		CLSID = s '{6F52F222-A7CA-4697-8BC3-E7DBAF19555E}'
+	}
+	ShapeShifter.MeasurementScale = s 'MeasurementScale Class'
+	{
+		CLSID = s '{6F52F222-A7CA-4697-8BC3-E7DBAF19555E}'
+		CurVer = s 'ShapeShifter.MeasurementScale.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6F52F222-A7CA-4697-8BC3-E7DBAF19555E} = s 'MeasurementScale Class'
+		{
+			ProgID = s 'ShapeShifter.MeasurementScale.1'
+			VersionIndependentProgID = s 'ShapeShifter.MeasurementScale'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingMeasurementScale = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

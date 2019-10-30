@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.FullScreenViewport.1 = s 'FullScreenViewport Class'
+	{
+		CLSID = s '{9FAD1E8C-4536-4c18-9B02-F3C766D39421}'
+	}
+	ShapeShifter.FullScreenViewport = s 'FullScreenViewport Class'
+	{
+		CLSID = s '{9FAD1E8C-4536-4c18-9B02-F3C766D39421}'
+		CurVer = s 'ShapeShifter.FullScreenViewport.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9FAD1E8C-4536-4c18-9B02-F3C766D39421} = s 'FullScreenViewport Class'
+		{
+			ProgID = s 'ShapeShifter.FullScreenViewport.1'
+			VersionIndependentProgID = s 'ShapeShifter.FullScreenViewport'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingFullScreenViewport = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

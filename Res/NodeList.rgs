@@ -1,0 +1,26 @@
+HKCR
+{
+	ShapeShifter.VisualList.1 = s 'VisualList Class'
+	{
+		CLSID = s '{0AA9E616-1BAB-4d93-8CBA-B352F3527081}'
+	}
+	ShapeShifter.VisualList = s 'VisualList Class'
+	{
+		CLSID = s '{0AA9E616-1BAB-4d93-8CBA-B352F3527081}'
+		CurVer = s 'ShapeShifter.VisualList.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {0AA9E616-1BAB-4d93-8CBA-B352F3527081} = s 'VisualList Class'
+		{
+			ProgID = s 'ShapeShifter.VisualList.1'
+			VersionIndependentProgID = s 'ShapeShifter.VisualList'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

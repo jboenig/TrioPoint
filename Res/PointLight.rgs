@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.PointLight.1 = s 'PointLight Class'
+	{
+		CLSID = s '{791094E9-B1E6-4dc2-85C3-687123B49FBE}'
+	}
+	ShapeShifter.PointLight = s 'PointLight Class'
+	{
+		CLSID = s '{791094E9-B1E6-4dc2-85C3-687123B49FBE}'
+		CurVer = s 'ShapeShifter.PointLight.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {791094E9-B1E6-4dc2-85C3-687123B49FBE} = s 'PointLight Class'
+		{
+			ProgID = s 'ShapeShifter.PointLight.1'
+			VersionIndependentProgID = s 'ShapeShifter.PointLight'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingPointLight = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

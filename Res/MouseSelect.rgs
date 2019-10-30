@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.MouseSelect.1 = s 'MouseSelect Class'
+	{
+		CLSID = s '{78F4D658-5C5B-40f9-A7DD-7A3B88629283}'
+	}
+	ShapeShifter.MouseSelect = s 'MouseSelect Class'
+	{
+		CLSID = s '{78F4D658-5C5B-40f9-A7DD-7A3B88629283}'
+		CurVer = s 'ShapeShifter.MouseSelect.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {78F4D658-5C5B-40f9-A7DD-7A3B88629283} = s 'MouseSelect Class'
+		{
+			ProgID = s 'ShapeShifter.MouseSelect.1'
+			VersionIndependentProgID = s 'ShapeShifter.MouseSelect'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingMouseSelect = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

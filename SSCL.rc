@@ -1,0 +1,328 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""SSCL.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "TrioPoint Software, Inc.\0"
+            VALUE "FileDescription", "SSCL Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "SSCL\0"
+            VALUE "LegalCopyright", "Copyright 2001\0"
+            VALUE "OriginalFilename", "SSCL.DLL\0"
+            VALUE "ProductName", "SSCL Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_ENGINE              REGISTRY DISCARDABLE    "Res\\Engine.rgs"
+IDR_MODEL               REGISTRY DISCARDABLE    "Res\\Model.rgs"
+IDR_FACEARRAY           REGISTRY DISCARDABLE    "Res\\FaceArray.rgs"
+IDR_MESH                REGISTRY DISCARDABLE    "Res\\Mesh.rgs"
+IDR_PRELITMESH          REGISTRY DISCARDABLE    "Res\\PrelitMesh.rgs"
+IDR_RENDERING_CONTEXT   REGISTRY DISCARDABLE    "Res\\RenderingContext.rgs"
+IDR_SHAPE               REGISTRY DISCARDABLE    "Res\\Shape.rgs"
+IDR_COMPOSITE_SHAPE     REGISTRY DISCARDABLE    "Res\\CompositeShape.rgs"
+IDR_GROUP               REGISTRY DISCARDABLE    "Res\\Group.rgs"
+IDR_BROWSE_CTLR         REGISTRY DISCARDABLE    "Res\\BrowseCtlr.rgs"
+IDR_BROWSE_EDIT_CTLR    REGISTRY DISCARDABLE    "Res\\BrowseEditCtlr.rgs"
+IDR_FLIGHT_CTLR         REGISTRY DISCARDABLE    "Res\\FlightCtlr.rgs"
+IDR_MATERIAL            REGISTRY DISCARDABLE    "Res\\Material.rgs"
+IDR_TEXTURE             REGISTRY DISCARDABLE    "Res\\Texture.rgs"
+IDR_DIRECTIONAL_LIGHT   REGISTRY DISCARDABLE    "Res\\DirectionalLight.rgs"
+IDR_POINT_LIGHT         REGISTRY DISCARDABLE    "Res\\PointLight.rgs"
+IDR_SPOT_LIGHT          REGISTRY DISCARDABLE    "Res\\SpotLight.rgs"
+IDR_ENUMNODELIST        REGISTRY DISCARDABLE    "Res\\EnumNodeList.rgs"
+IDR_ENUMVARIANTNODELIST REGISTRY DISCARDABLE    "Res\\EnumVariantNodeList.rgs"
+IDR_NODELIST            REGISTRY DISCARDABLE    "Res\\NodeList.rgs"
+IDR_MESHEDITOR          REGISTRY DISCARDABLE    "Res\\MeshEditor.rgs"
+IDR_WNDMESSAGESOURCE    REGISTRY DISCARDABLE    "Res\\WndMessageSource.rgs"
+IDR_DEVICE              REGISTRY DISCARDABLE    "Res\\Device.rgs"
+IDR_TEXTURE_STAGE       REGISTRY DISCARDABLE    "Res\\TextureStage.rgs"
+IDR_MEASUREMENT_SCALE   REGISTRY DISCARDABLE    "Res\\MeasurementScale.rgs"
+IDR_ANIMATION_LOOP      REGISTRY DISCARDABLE    "Res\\AnimationLoop.rgs"
+IDR_CAMERA_FLY          REGISTRY DISCARDABLE    "Res\\CameraFly.rgs"
+IDR_CAMERA_STEP         REGISTRY DISCARDABLE    "Res\\CameraStep.rgs"
+IDR_MOUSE_SELECT        REGISTRY DISCARDABLE    "Res\\MouseSelect.rgs"
+IDR_DRAG_DROP           REGISTRY DISCARDABLE    "Res\\DragDrop.rgs"
+IDR_TRACKER             REGISTRY DISCARDABLE    "Res\\Tracker.rgs"
+IDR_CREATE_SHAPE_COMMAND REGISTRY DISCARDABLE    "Res\\CreateShapeCommand.rgs"
+IDR_INSERT_COMMAND      REGISTRY DISCARDABLE    "Res\\InsertCommand.rgs"
+IDR_DELETE_COMMAND      REGISTRY DISCARDABLE    "Res\\DeleteCommand.rgs"
+IDR_MOVE_COMMAND        REGISTRY DISCARDABLE    "Res\\MoveCommand.rgs"
+IDR_ROTATE_COMMAND      REGISTRY DISCARDABLE    "Res\\RotateCommand.rgs"
+IDR_SCALE_COMMAND       REGISTRY DISCARDABLE    "Res\\ScaleCommand.rgs"
+IDR_GROUP_COMMAND       REGISTRY DISCARDABLE    "Res\\GroupCommand.rgs"
+IDR_UNGROUP_COMMAND     REGISTRY DISCARDABLE    "Res\\UngroupCommand.rgs"
+IDR_MACRO_COMMAND       REGISTRY DISCARDABLE    "Res\\MacroCommand.rgs"
+IDR_XML_ARCHIVE         REGISTRY DISCARDABLE    "Res\\XMLArchive.rgs"
+IDR_NAMESPACE           REGISTRY DISCARDABLE    "Res\\Namespace.rgs"
+IDR_MODEL_READER_3DS    REGISTRY DISCARDABLE    "Res\\ModelReader3DS.rgs"
+IDR_MODEL_READER_DXF    REGISTRY DISCARDABLE    "Res\\ModelReaderDXF.rgs"
+IDR_MODEL_READER_XML    REGISTRY DISCARDABLE    "Res\\ModelReaderXML.rgs"
+IDR_MODEL_WRITER_XML    REGISTRY DISCARDABLE    "Res\\ModelWriterXML.rgs"
+IDR_VIEWPORT            REGISTRY DISCARDABLE    "Res\\Viewport.rgs"
+IDR_CAMERA              REGISTRY DISCARDABLE    "Res\\Camera.rgs"
+IDR_INPUT_DEVICE        REGISTRY DISCARDABLE    "Res\\InputDevice.rgs"
+IDR_SHAPESHIFTER_CTL    REGISTRY DISCARDABLE    "Res\\ShapeShifterCtl.rgs"
+IDR_INSERTDELETE_NODES  REGISTRY DISCARDABLE    "Res\\InsertDeleteNodes.rgs"
+IDR_AXIS_GUIDE          REGISTRY DISCARDABLE    "Res\\AxisGuide.rgs"
+IDR_GENERAL_PROPPAGE    REGISTRY DISCARDABLE    "Res\\GeneralPropPage.rgs"
+IDR_VIEW_PROPPAGE       REGISTRY DISCARDABLE    "Res\\ViewPropPage.rgs"
+IDR_TYPES_PROPPAGE      REGISTRY DISCARDABLE    "Res\\TypesPropPage.rgs"
+IDR_BEHAVIOR_PROPPAGE   REGISTRY DISCARDABLE    "Res\\BehaviorPropPage.rgs"
+IDR_BSPTREE             REGISTRY DISCARDABLE    "Res\\BSPTree.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTDLG DIALOG DISCARDABLE  0, 0, 219, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "ShapeShifter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,179,75,33,13
+    LTEXT           "ShapeShifter Component Library",IDC_STATIC,55,11,102,8
+    RTEXT           "Version 1.0",IDC_STATIC,172,11,39,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,3,63,213,1
+    ICON            IDI_SHAPESHIFTER,IDC_STATIC,5,5,20,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,2,31,213,1
+    LTEXT           "Copyright 2001 TrioPoint Software, Inc.",IDC_STATIC,7,
+                    69,124,8
+    LTEXT           "http://www.triopoint.com",IDC_STATIC,7,80,80,8
+    LTEXT           "Driver Name:",IDC_STATIC,4,36,57,8
+    LTEXT           "Unknown",IDC_DRIVER_NAME,67,37,140,8
+    LTEXT           "Driver Description:",IDC_STATIC,4,48,64,8
+    LTEXT           "Unknown",IDC_DRIVER_DESC,67,48,142,8
+END
+
+IDD_GENERAL_PROPPAGE DIALOG DISCARDABLE  0, 0, 271, 105
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_FILENAME,53,18,146,12,ES_AUTOHSCROLL
+    RTEXT           "Filename:",IDC_STATIC,11,19,35,10
+    PUSHBUTTON      "Browse",IDC_BROWSE,207,18,52,13
+    CONTROL         "Internet Enabled",IDC_INTERNET_ENABLED,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,54,47,73,12
+END
+
+IDD_VIEW_PROPPAGE DIALOG DISCARDABLE  0, 0, 279, 129
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Viewport Type:",IDC_STATIC,45,11,52,9
+    COMBOBOX        IDC_VIEWPORT_TYPE,102,8,65,51,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    RTEXT           "Field of view (radians):",IDC_STATIC,24,25,73,8
+    EDITTEXT        IDC_FOV,102,22,42,12,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "Aspect Ratio:",IDC_STATIC,40,38,57,8
+    EDITTEXT        IDC_ASPECT,102,36,42,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "Auto Aspect",IDC_AUTO_ASPECT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,152,36,65,12
+    RTEXT           "Near plane:",IDC_STATIC,40,51,57,8
+    EDITTEXT        IDC_NEARPLANE,102,49,42,12,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "Far plane:",IDC_STATIC,40,64,57,8
+    EDITTEXT        IDC_FARPLANE,102,62,42,12,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "Camera Location:",IDC_STATIC,40,77,57,8
+    EDITTEXT        IDC_CAMERALOC_X,102,75,42,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_CAMERALOC_Y,148,75,42,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_CAMERALOC_Z,194,75,42,12,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "Camera Aim Vector:",IDC_STATIC,30,90,67,8
+    EDITTEXT        IDC_CAMERAAIM_X,102,88,42,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_CAMERAAIM_Y,148,88,42,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_CAMERAAIM_Z,194,88,42,12,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "Camera Up Vector:",IDC_STATIC,30,102,67,8
+    EDITTEXT        IDC_CAMERAUP_X,102,101,42,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_CAMERAUP_Y,148,101,42,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_CAMERAUP_Z,194,101,42,12,ES_RIGHT | ES_AUTOHSCROLL
+END
+
+IDD_TYPES_PROPPAGE DIALOG DISCARDABLE  0, 0, 271, 105
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Model Type:",IDC_STATIC,25,22,73,8
+    EDITTEXT        IDC_MODELTYPE,101,21,141,12,ES_AUTOHSCROLL
+    RTEXT           "Viewport Type:",IDC_STATIC,41,48,57,8
+    EDITTEXT        IDC_VIEWPORTTYPE,101,47,141,12,ES_AUTOHSCROLL
+    RTEXT           "Controller Type:",IDC_STATIC,41,35,57,8
+    EDITTEXT        IDC_CONTROLLERTYPE,101,34,141,12,ES_AUTOHSCROLL
+    RTEXT           "Model Reader Type:",IDC_STATIC,15,61,82,8
+    EDITTEXT        IDC_MODELREADERTYPE,101,60,141,12,ES_AUTOHSCROLL
+END
+
+IDD_BEHAVIOR_PROPPAGE DIALOG DISCARDABLE  0, 0, 271, 105
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Animation Enabled",IDC_ANIMATION_ENABLED,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,176,21,73,11
+    CONTROL         "Collisions Enabled",IDC_COLLISIONS_ENABLED,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,176,38,73,11
+    RTEXT           "Animation Interval:",IDC_STATIC,17,22,60,8
+    EDITTEXT        IDC_ANIMATION_INTERVAL,81,20,40,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "milliseconds",IDC_STATIC,126,22,39,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_SHAPESHIFTER        ICON    DISCARDABLE     "Res\\ShapeShifter.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_VIEW_PROPPAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 271
+        BOTTOMMARGIN, 123
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "SSCL"
+    IDS_LICENSE_FILENAME    "sscl_lic.dat"
+    IDS_LICENSE_MSGBOX_TITLE "ShapeShifter License Manager"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LICENSE_EXPIRED_MSG "The evaluation period for ShapeShifter has expired. Please visit http://www.triopoint.com to purchase a license."
+    IDS_LICENSE_COUNTDOWN_MSG 
+                            "There are %d days remaining to evaluate ShapeShifter. Please visit http://www.triopoint.com to purchase a license."
+    IDS_LICENSE_MISSING_MSG "You are running an unlicensed copy of ShapeShifter. Please visit http://www.triopoint.com to purchase a license."
+    IDS_TITLEGeneralPropPage "General"
+    IDS_DOCSTRINGGeneralPropPage "General properties"
+    IDS_TITLEViewPropPage   "View"
+    IDS_DOCSTRINGViewPropPage "View properties"
+    IDS_TITLETypesPropPage  "Types"
+    IDS_DOCSTRINGTypesPropPage "Types properties"
+    IDS_TITLEBehaviorPropPage "Behavior"
+    IDS_DOCSTRINGBehaviorPropPage "Behavior properties"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	IDS_E_ENGINE_ALREADY_INIT "ShapeShifter engine already initialized"
+	IDS_E_DIRECTX_INIT        "Unable to initialize DirectX engine"
+	IDS_E_WININET_INIT        "Unable to initialize WinINet internet services"
+	IDS_E_INIT_VIEWPORT       "Error initializing viewport for rendering"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "SSCL.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

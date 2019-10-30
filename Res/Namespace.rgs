@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.Namespace.1 = s 'Namespace Class'
+	{
+		CLSID = s '{8931527D-D8D5-4475-B7EE-F83A35E86AC4}'
+	}
+	ShapeShifter.Namespace = s 'Namespace Class'
+	{
+		CLSID = s '{8931527D-D8D5-4475-B7EE-F83A35E86AC4}'
+		CurVer = s 'ShapeShifter.Namespace.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8931527D-D8D5-4475-B7EE-F83A35E86AC4} = s 'Namespace Class'
+		{
+			ProgID = s 'ShapeShifter.Namespace.1'
+			VersionIndependentProgID = s 'ShapeShifter.Namespace'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingNamespace = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

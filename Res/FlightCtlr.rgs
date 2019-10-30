@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.FlightController.1 = s 'FlightController Class'
+	{
+		CLSID = s '{EDAAB949-85B4-426a-A6D9-8FD2A9BABA3E}'
+	}
+	ShapeShifter.FlightController = s 'FlightController Class'
+	{
+		CLSID = s '{EDAAB949-85B4-426a-A6D9-8FD2A9BABA3E}'
+		CurVer = s 'ShapeShifter.FlightController.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {EDAAB949-85B4-426a-A6D9-8FD2A9BABA3E} = s 'FlightController Class'
+		{
+			ProgID = s 'ShapeShifter.FlightController.1'
+			VersionIndependentProgID = s 'ShapeShifter.FlightController'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingFlightController = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.MacroCommand.1 = s 'MacroCommand Class'
+	{
+		CLSID = s '{4F9962EB-4670-4b4f-833B-7EB28E02C780}'
+	}
+	ShapeShifter.MacroCommand = s 'MacroCommand Class'
+	{
+		CLSID = s '{4F9962EB-4670-4b4f-833B-7EB28E02C780}'
+		CurVer = s 'ShapeShifter.MacroCommand.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4F9962EB-4670-4b4f-833B-7EB28E02C780} = s 'MacroCommand Class'
+		{
+			ProgID = s 'ShapeShifter.MacroCommand.1'
+			VersionIndependentProgID = s 'ShapeShifter.MacroCommand'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingMacroCommand = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

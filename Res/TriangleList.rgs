@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.TriangleList.1 = s 'TriangleList Class'
+	{
+		CLSID = s '{6D92C723-99AB-4825-AAEB-8C10CD409401}'
+	}
+	ShapeShifter.TriangleList = s 'TriangleList Class'
+	{
+		CLSID = s '{6D92C723-99AB-4825-AAEB-8C10CD409401}'
+		CurVer = s 'ShapeShifter.TriangleList.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6D92C723-99AB-4825-AAEB-8C10CD409401} = s 'TriangleList Class'
+		{
+			ProgID = s 'ShapeShifter.TriangleList.1'
+			VersionIndependentProgID = s 'ShapeShifter.TriangleList'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingTriangleList = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

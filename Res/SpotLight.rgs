@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.SpotLight.1 = s 'SpotLight Class'
+	{
+		CLSID = s '{834B55AE-8D7A-4bb9-BA0D-C1AF44CE8F5A}'
+	}
+	ShapeShifter.SpotLight = s 'SpotLight Class'
+	{
+		CLSID = s '{834B55AE-8D7A-4bb9-BA0D-C1AF44CE8F5A}'
+		CurVer = s 'ShapeShifter.SpotLight.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {834B55AE-8D7A-4bb9-BA0D-C1AF44CE8F5A} = s 'SpotLight Class'
+		{
+			ProgID = s 'ShapeShifter.SpotLight.1'
+			VersionIndependentProgID = s 'ShapeShifter.SpotLight'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingSpotLight = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

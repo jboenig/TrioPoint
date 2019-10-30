@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.TypesPropPage.1 = s 'TypesPropPage Class'
+	{
+		CLSID = s '{75D201DD-0964-4ada-8B15-195F502BDE2F}'
+	}
+	ShapeShifter.TypesPropPage = s 'TypesPropPage Class'
+	{
+		CLSID = s '{75D201DD-0964-4ada-8B15-195F502BDE2F}'
+		CurVer = s 'ShapeShifter.TypesPropPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {75D201DD-0964-4ada-8B15-195F502BDE2F} = s 'TypesPropPage Class'
+		{
+			ProgID = s 'ShapeShifter.TypesPropPage.1'
+			VersionIndependentProgID = s 'ShapeShifter.TypesPropPage'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingTypesPropPage = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

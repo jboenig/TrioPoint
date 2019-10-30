@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.BSPTree.1 = s 'BSPTree Class'
+	{
+		CLSID = s '{5573676C-770D-480d-8D8B-60021654FC10}'
+	}
+	ShapeShifter.BSPTree = s 'BSPTree Class'
+	{
+		CLSID = s '{5573676C-770D-480d-8D8B-60021654FC10}'
+		CurVer = s 'ShapeShifter.BSPTree.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5573676C-770D-480d-8D8B-60021654FC10} = s 'BSPTree Class'
+		{
+			ProgID = s 'ShapeShifter.BSPTree.1'
+			VersionIndependentProgID = s 'ShapeShifter.BSPTree'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingBSPTree = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

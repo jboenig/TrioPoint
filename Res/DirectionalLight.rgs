@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.DirectionalLight.1 = s 'DirectionalLight Class'
+	{
+		CLSID = s '{8B66DB90-6421-4f42-B29C-F01401A3DC13}'
+	}
+	ShapeShifter.DirectionalLight = s 'DirectionalLight Class'
+	{
+		CLSID = s '{8B66DB90-6421-4f42-B29C-F01401A3DC13}'
+		CurVer = s 'ShapeShifter.DirectionalLight.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8B66DB90-6421-4f42-B29C-F01401A3DC13} = s 'DirectionalLight Class'
+		{
+			ProgID = s 'ShapeShifter.DirectionalLight.1'
+			VersionIndependentProgID = s 'ShapeShifter.DirectionalLight'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingDirectionalLight = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

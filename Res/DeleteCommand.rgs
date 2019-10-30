@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.DeleteCommand.1 = s 'DeleteCommand Class'
+	{
+		CLSID = s '{DB58D743-458F-4c1b-B6FD-F952A16B4629}'
+	}
+	ShapeShifter.DeleteCommand = s 'DeleteCommand Class'
+	{
+		CLSID = s '{DB58D743-458F-4c1b-B6FD-F952A16B4629}'
+		CurVer = s 'ShapeShifter.DeleteCommand.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {DB58D743-458F-4c1b-B6FD-F952A16B4629} = s 'DeleteCommand Class'
+		{
+			ProgID = s 'ShapeShifter.DeleteCommand.1'
+			VersionIndependentProgID = s 'ShapeShifter.DeleteCommand'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingDeleteCommand = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

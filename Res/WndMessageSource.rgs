@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.WndMessageSource.1 = s 'WndMessageSource Class'
+	{
+		CLSID = s '{BEED760A-FBD8-46d8-97C7-5116C75A606F}'
+	}
+	ShapeShifter.WndMessageSource = s 'WndMessageSource Class'
+	{
+		CLSID = s '{BEED760A-FBD8-46d8-97C7-5116C75A606F}'
+		CurVer = s 'ShapeShifter.WndMessageSource.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {BEED760A-FBD8-46d8-97C7-5116C75A606F} = s 'WndMessageSource Class'
+		{
+			ProgID = s 'ShapeShifter.WndMessageSource.1'
+			VersionIndependentProgID = s 'ShapeShifter.WndMessageSource'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingWndMessageSource = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

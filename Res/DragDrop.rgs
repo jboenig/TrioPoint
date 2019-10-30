@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.DragDrop.1 = s 'DragDrop Class'
+	{
+		CLSID = s '{3010FB89-5D4A-4267-9554-1207B09D43B2}'
+	}
+	ShapeShifter.DragDrop = s 'DragDrop Class'
+	{
+		CLSID = s '{3010FB89-5D4A-4267-9554-1207B09D43B2}'
+		CurVer = s 'ShapeShifter.DragDrop.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {3010FB89-5D4A-4267-9554-1207B09D43B2} = s 'DragDrop Class'
+		{
+			ProgID = s 'ShapeShifter.DragDrop.1'
+			VersionIndependentProgID = s 'ShapeShifter.DragDrop'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingDragDrop = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

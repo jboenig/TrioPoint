@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.Tracker.1 = s 'Tracker Class'
+	{
+		CLSID = s '{9D9EB2D1-EC61-4006-9C91-B32B1F91FA9C}'
+	}
+	ShapeShifter.Tracker = s 'Tracker Class'
+	{
+		CLSID = s '{9D9EB2D1-EC61-4006-9C91-B32B1F91FA9C}'
+		CurVer = s 'ShapeShifter.Tracker.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9D9EB2D1-EC61-4006-9C91-B32B1F91FA9C} = s 'Tracker Class'
+		{
+			ProgID = s 'ShapeShifter.Tracker.1'
+			VersionIndependentProgID = s 'ShapeShifter.Tracker'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingTracker = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

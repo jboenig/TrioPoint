@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.Viewport.1 = s 'Viewport Class'
+	{
+		CLSID = s '{F9567425-545B-48d3-873A-32236B5565D0}'
+	}
+	ShapeShifter.Viewport = s 'Viewport Class'
+	{
+		CLSID = s '{F9567425-545B-48d3-873A-32236B5565D0}'
+		CurVer = s 'ShapeShifter.Viewport.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {F9567425-545B-48d3-873A-32236B5565D0} = s 'Viewport Class'
+		{
+			ProgID = s 'ShapeShifter.Viewport.1'
+			VersionIndependentProgID = s 'ShapeShifter.Viewport'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingViewport = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

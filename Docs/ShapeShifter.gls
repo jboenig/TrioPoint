@@ -1,0 +1,72 @@
+>Node
+Named objects that form a hierarchy. All objects that can be placed in
+a model hierarchy and referenced by name are nodes. Shapes, textures,
+materials, lights, meshes, and even models are nodes. 
+>Model
+A collection of nodes that can be rendered as a unit. Models contain
+shapes, lights, textures, materials, and other types of nodes that
+describe a 3D scene. Models are nodes and can be nested inside other
+models.
+>Viewport
+A viewport is a 2D view of a 3D model. A viewport renders a model
+onto a device. Viewports can be windowed or full-screen.
+>Controller
+An object that receives events and translates those events into actions
+or commands. Controllers can be plugged into a window in order to receive
+events from the window. They can also receive input from DirectInput
+devices. Animation loops can be used to fire animation events to a
+controller.
+>Shape
+A node within a model that contains a mesh and context information for
+rendering the mesh. Context information consists of materials, textures,
+texture stages, and rendering contexts that define the rendering properties
+for each primitive in the mesh.
+>Device
+Encapsulates access to a video adapter and device driver. Viewports are tied
+to a particular device when they are created. When a viewport is rendered, it
+prepares the device with the appropriate settings and passes the device to
+the model. The model and the child nodes it contains render themselves onto
+the device.
+>Mesh
+A collection of vertices and rendering primitives that define a wire frame.
+A mesh must be associated with a shape in order to be rendered. Shapes provide
+the context and transformation information necessary to render the mesh in
+world space and provide materials and textures. A mesh can be associated with
+multiple shapes.
+>Primitive
+Smallest unit in a mesh that can be rendered in a single operation. Types
+of primitives are: triangle list, triangle fan, triangle strip, line list,
+point list, and line strip.
+>Context Node
+A node that selects context information into a device during rendering. Textures,
+texture stages, materials, and lights are examples of context nodes.
+>Rendering Context
+A particular type of context node that contains other context nodes and a
+collection rendering state flags.
+>Texture
+Context node that contains a bitmap of pixel colors that are applied to the
+faces of one or more primitives.
+>Material
+Context node that defines the lighting properties of the faces of one or more
+primitives. Color values for ambient, diffuse, specular, and emissive light
+define how the material reflects light.
+>Light
+Context node that defines a light source in a model. There are three types
+supported: directional lights, spot lights, and point lights. These are in
+addition to the ambient light defined for a model.
+>Ambient Light
+Light that has no determinable direction or source and illuminates the
+entire scene equally. Produces low-intensity illumation everywhere in a
+scene.
+>Command
+An object that encapsulates an action on the model. Commands can "do" and
+"undo" the action. They can also be aggegrated into macros.
+>Behavior
+Controllers are composed of one or more behaviors. Behaviors receive the input
+sent to the controller and translate that input into commands. A behavior can
+be aggregated into more than one type of controller and provide a way to reuse
+functionality in different controller types.
+>XML
+If you're from another galaxy you may not have heard of this - eXtensible Markup
+Language. ShapeShifter uses Microsoft's XML DOM to implement a native, high-fidelity
+file format.

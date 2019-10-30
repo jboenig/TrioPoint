@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.TextureAddressingMode.1 = s 'TextureAddressingMode Class'
+	{
+		CLSID = s '{32C2C759-AF24-4a7a-AE96-5F28CDF2616D}'
+	}
+	ShapeShifter.TextureAddressingMode = s 'TextureAddressingMode Class'
+	{
+		CLSID = s '{32C2C759-AF24-4a7a-AE96-5F28CDF2616D}'
+		CurVer = s 'ShapeShifter.TextureAddressingMode.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {32C2C759-AF24-4a7a-AE96-5F28CDF2616D} = s 'TextureAddressingMode Class'
+		{
+			ProgID = s 'ShapeShifter.TextureAddressingMode.1'
+			VersionIndependentProgID = s 'ShapeShifter.TextureAddressingMode'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingTextureAddressingMode = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.MeshEditor.1 = s 'MeshEditor Class'
+	{
+		CLSID = s '{E04D586B-F3EA-4b8f-B49D-CC88AD2D7B4A}'
+	}
+	ShapeShifter.MeshEditor = s 'MeshEditor Class'
+	{
+		CLSID = s '{E04D586B-F3EA-4b8f-B49D-CC88AD2D7B4A}'
+		CurVer = s 'ShapeShifter.MeshEditor.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E04D586B-F3EA-4b8f-B49D-CC88AD2D7B4A} = s 'MeshEditor Class'
+		{
+			ProgID = s 'ShapeShifter.MeshEditor.1'
+			VersionIndependentProgID = s 'ShapeShifter.MeshEditor'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingMeshEditor = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

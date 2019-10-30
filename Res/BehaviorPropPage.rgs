@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.BehaviorPropPage.1 = s 'BehaviorPropPage Class'
+	{
+		CLSID = s '{CCDFE1CE-21A9-4946-B9B5-322855232D9F}'
+	}
+	ShapeShifter.BehaviorPropPage = s 'BehaviorPropPage Class'
+	{
+		CLSID = s '{CCDFE1CE-21A9-4946-B9B5-322855232D9F}'
+		CurVer = s 'ShapeShifter.BehaviorPropPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CCDFE1CE-21A9-4946-B9B5-322855232D9F} = s 'BehaviorPropPage Class'
+		{
+			ProgID = s 'ShapeShifter.BehaviorPropPage.1'
+			VersionIndependentProgID = s 'ShapeShifter.BehaviorPropPage'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingBehaviorPropPage = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

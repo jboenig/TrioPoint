@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.ModelReader3DS.1 = s 'ModelReader3DS Class'
+	{
+		CLSID = s '{87BAC354-DCA1-4e02-9167-F3499471A3AD}'
+	}
+	ShapeShifter.ModelReader3DS = s 'ModelReader3DS Class'
+	{
+		CLSID = s '{87BAC354-DCA1-4e02-9167-F3499471A3AD}'
+		CurVer = s 'ShapeShifter.ModelReader3DS.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {87BAC354-DCA1-4e02-9167-F3499471A3AD} = s 'ModelReader3DS Class'
+		{
+			ProgID = s 'ShapeShifter.ModelReader3DS.1'
+			VersionIndependentProgID = s 'ShapeShifter.ModelReader3DS'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModelReader3DS = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

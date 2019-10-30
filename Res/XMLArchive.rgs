@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.XMLArchive.1 = s 'XMLArchive Class'
+	{
+		CLSID = s '{EF4D5D4A-9AC8-43c1-8577-92BE85AE9A64}'
+	}
+	ShapeShifter.XMLArchive = s 'XMLArchive Class'
+	{
+		CLSID = s '{EF4D5D4A-9AC8-43c1-8577-92BE85AE9A64}'
+		CurVer = s 'ShapeShifter.XMLArchive.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {EF4D5D4A-9AC8-43c1-8577-92BE85AE9A64} = s 'XMLArchive Class'
+		{
+			ProgID = s 'ShapeShifter.XMLArchive.1'
+			VersionIndependentProgID = s 'ShapeShifter.XMLArchive'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingXMLArchive = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

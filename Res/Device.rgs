@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.Device.1 = s 'Device Class'
+	{
+		CLSID = s '{4631C5EA-582C-4af1-94BC-1A9368AFCCC2}'
+	}
+	ShapeShifter.Device = s 'Device Class'
+	{
+		CLSID = s '{4631C5EA-582C-4af1-94BC-1A9368AFCCC2}'
+		CurVer = s 'ShapeShifter.Device.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4631C5EA-582C-4af1-94BC-1A9368AFCCC2} = s 'Device Class'
+		{
+			ProgID = s 'ShapeShifter.Device.1'
+			VersionIndependentProgID = s 'ShapeShifter.Device'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingDevice = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

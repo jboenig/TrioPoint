@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.RotateCommand.1 = s 'RotateCommand Class'
+	{
+		CLSID = s '{897CCDDC-5DC3-4a18-8788-F19333F7FC5C}'
+	}
+	ShapeShifter.RotateCommand = s 'RotateCommand Class'
+	{
+		CLSID = s '{897CCDDC-5DC3-4a18-8788-F19333F7FC5C}'
+		CurVer = s 'ShapeShifter.RotateCommand.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {897CCDDC-5DC3-4a18-8788-F19333F7FC5C} = s 'RotateCommand Class'
+		{
+			ProgID = s 'ShapeShifter.RotateCommand.1'
+			VersionIndependentProgID = s 'ShapeShifter.RotateCommand'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingRotateCommand = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

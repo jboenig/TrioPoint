@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<div align="left">
+  <table border="1" width="600" bordercolor="#C0C0C0">
+    <tr>
+      <td bgcolor="#C0C0C0">
+        <p align="center"><font face="Arial" size="3"><b>ShapeShifter Submarine
+        Web Demo</b></font></td>
+    </tr>
+    <tr>
+      <td>
+        <object classid="clsid:8DA02F49-0B29-4EC1-8BDE-783F2CB9E39B" id="ShapeShifterCtl1" width="590" height="495">
+          <param name="NearPlane" value="1">
+          <param name="FarPlane" value="10000">
+          <param name="ModelFile" value="3DS\La Class Submarine\lasub.3ds">
+        </object>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <p><input type="checkbox" name="WireFrameCheck" value="OFF">Wire Frame</p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p>&nbsp;</p>
+<script LANGUAGE="VBScript">
+<!--
+Sub window_onLoad
+	ShapeShifterCtl1.Controller.GetBehavior("CameraStep").MoveIncrement = 30
+	ShapeShifterCtl1.Controller.CollisionsEnabled = False
+	Set Camera = ShapeShifterCtl1.Viewport.Camera
+	ShapeShifterCtl1.Viewport.Camera.SetLocation 650, 0, -300
+	ShapeShifterCtl1.Viewport.Camera.SetAimVector -1, 0, 0
+End Sub
+
+Sub WireFrameCheck_onClick
+	If (WireFrameCheck.checked) Then
+		ShapeShifterCtl1.Viewport.FillMode = 2
+	Else
+		ShapeShifterCtl1.Viewport.FillMode = 3
+	End If
+	ShapeShifterCtl1.Viewport.Render
+	ShapeShifterCtl1.Viewport.RefreshScreen
+End Sub
+ 
+-->
+</script>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

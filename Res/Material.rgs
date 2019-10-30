@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.Material.1 = s 'Material Class'
+	{
+		CLSID = s '{CF1087BA-726A-4847-A91F-179B22B8E054}'
+	}
+	ShapeShifter.Material = s 'Material Class'
+	{
+		CLSID = s '{CF1087BA-726A-4847-A91F-179B22B8E054}'
+		CurVer = s 'ShapeShifter.Material.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CF1087BA-726A-4847-A91F-179B22B8E054} = s 'Material Class'
+		{
+			ProgID = s 'ShapeShifter.Material.1'
+			VersionIndependentProgID = s 'ShapeShifter.Material'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingMaterial = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

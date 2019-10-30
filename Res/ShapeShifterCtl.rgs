@@ -1,0 +1,34 @@
+HKCR
+{
+	ShapeShifter.ShapeShifterCtl.1 = s 'ShapeShifterCtl Class'
+	{
+		CLSID = s '{8DA02F49-0B29-4ec1-8BDE-783F2CB9E39B}'
+	}
+	ShapeShifter.ShapeShifterCtl = s 'ShapeShifterCtl Class'
+	{
+		CLSID = s '{8DA02F49-0B29-4ec1-8BDE-783F2CB9E39B}'
+		CurVer = s 'ShapeShifter.ShapeShifterCtl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8DA02F49-0B29-4ec1-8BDE-783F2CB9E39B} = s 'ShapeShifterCtl Class'
+		{
+			ProgID = s 'ShapeShifter.ShapeShifterCtl.1'
+			VersionIndependentProgID = s 'ShapeShifter.ShapeShifterCtl'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+			'Version' = s '1.0'
+		}
+	}
+}

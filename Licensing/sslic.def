@@ -1,0 +1,7 @@
+; SSLIC.def : Declares the module parameters.
+
+LIBRARY      "SSLIC.DLL"
+
+EXPORTS
+	CheckLicenseKey @1 PRIVATE
+	WriteLicenseFile @2 PRIVATE

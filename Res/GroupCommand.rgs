@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.GroupCommand.1 = s 'Group Command Class'
+	{
+		CLSID = s '{ABD700EB-DF69-4615-A1A6-DE1D927C064E}'
+	}
+	ShapeShifter.GroupCommand = s 'GroupCommand Class'
+	{
+		CLSID = s '{ABD700EB-DF69-4615-A1A6-DE1D927C064E}'
+		CurVer = s 'ShapeShifter.GroupCommand.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {ABD700EB-DF69-4615-A1A6-DE1D927C064E} = s 'GroupCommand Class'
+		{
+			ProgID = s 'ShapeShifter.GroupCommand.1'
+			VersionIndependentProgID = s 'ShapeShifter.GroupCommand'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingGroup = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

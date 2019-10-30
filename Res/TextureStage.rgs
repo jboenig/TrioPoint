@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.TextureStage.1 = s 'TextureStage Class'
+	{
+		CLSID = s '{F2611596-F756-45fe-B777-9F14061A0D3B}'
+	}
+	ShapeShifter.TextureStage = s 'TextureStage Class'
+	{
+		CLSID = s '{F2611596-F756-45fe-B777-9F14061A0D3B}'
+		CurVer = s 'ShapeShifter.TextureStage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {F2611596-F756-45fe-B777-9F14061A0D3B} = s 'TextureStage Class'
+		{
+			ProgID = s 'ShapeShifter.TextureStage.1'
+			VersionIndependentProgID = s 'ShapeShifter.TextureStage'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingTextureStage = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.AnimationLoop.1 = s 'AnimationLoop Class'
+	{
+		CLSID = s '{255E0E74-7A70-4d4e-8930-319ECF86D4F2}'
+	}
+	ShapeShifter.AnimationLoop = s 'AnimationLoop Class'
+	{
+		CLSID = s '{255E0E74-7A70-4d4e-8930-319ECF86D4F2}'
+		CurVer = s 'ShapeShifter.AnimationLoop.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {255E0E74-7A70-4d4e-8930-319ECF86D4F2} = s 'AnimationLoop Class'
+		{
+			ProgID = s 'ShapeShifter.AnimationLoop.1'
+			VersionIndependentProgID = s 'ShapeShifter.AnimationLoop'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingAnimationLoop = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

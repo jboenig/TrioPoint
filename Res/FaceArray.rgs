@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.FaceArray.1 = s 'FaceArray Class'
+	{
+		CLSID = s '{C293DFCA-8C9C-40b7-88FA-1345332109A7}'
+	}
+	ShapeShifter.FaceArray = s 'FaceArray Class'
+	{
+		CLSID = s '{C293DFCA-8C9C-40b7-88FA-1345332109A7}'
+		CurVer = s 'ShapeShifter.FaceArray.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C293DFCA-8C9C-40b7-88FA-1345332109A7} = s 'FaceArray Class'
+		{
+			ProgID = s 'ShapeShifter.FaceArray.1'
+			VersionIndependentProgID = s 'ShapeShifter.FaceArray'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingFaceArray = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

@@ -1,0 +1,759 @@
+:Base SSCL100REF.hlp
+:Title ShapeShifter Reference Guide
+1 ShapeShifter Reference Guide
+2 Class Hierarchy=fe8a08x0
+2 Interfaces
+3 IAnimate
+4 Overview=12e1478x14dfc50
+4 Animate=12e1308x14d51dc
+
+3 IAnimationLoop
+4 Overview=12e1478x14d5344
+4 Operations
+5 AddAnimator=12e1308x14d873c
+5 FireAnimation=12e1308x14d5850
+5 RemoveAnimator=12e1308x14d3d74
+5 Start=12e1308x14e2888
+5 Stop=12e1308x14e5cf8
+4 Read-only Properties
+5 Running=12e1308x14e98cc
+4 Read/Write Properties
+5 Interval=12e1308x14e54a4
+
+3 IAxisGuide
+4 Overview=12e1478x14e83cc
+4 AxisLength=12e1308x14e5758
+
+3 IBSPTree
+4 Overview=12e1478x14d63d0
+4 AddObject=12e1308x14d5380
+4 GetChildrenIntersectingBox=12e1308x14e2b3c
+4 GetChildrenIntersectingPlane=12e1308x14d74f0
+4 GetChildrenIntersectingRay=12e1308x14e5030
+4 GetChildrenIntersectingSphere=12e1308x14d84a8
+4 Initialize=12e1308x14e515c
+4 RemoveAllObjects=12e1308x14ddc0c
+4 RemoveObject=12e1308x14e7ac4
+4 SetPartitions=12e1308x14d7f60
+4 SetVolume=12e1308x14d72d4
+4 UpdateObject=12e1308x14dd3b8
+
+3 IBehavior
+4 Overview=12e1478x14db100
+4 Operations
+5 SetController=12e1308x14dfb7c
+4 Read-only Properties
+5 Name=12e1308x14e81b0
+4 Read/Write Properties
+5 Enabled=12e1308x14e8680
+
+3 ICamera
+4 Overview=12e1478x14d5670
+4 GetAimVector=12e1308x14db010
+4 GetLocation=12e1308x14de064
+4 GetUpVector=12e1308x14dc478
+4 Move=12e1308x14de154
+4 PointAt=12e1308x14e5974
+4 Rotate=12e1308x14d467c
+4 SetAimVector=12e1308x14e1894
+4 SetLocation=12e1308x14e11a8
+4 SetUpVector=12e1308x14df960
+4 Translate=12e1308x14e3f2c
+
+3 ICameraFly
+4 Overview=12e1478x14d8cfc
+4 RotateDistance=12e1308x14e0e60
+4 RotateTime=12e1308x14e13a8
+4 VelocityDistance=12e1308x14d347c
+4 VelocityTime=12e1308x14e12b8
+
+3 ICameraStep
+4 Overview=12e1478x14dbbe8
+4 MoveIncrement=12e1308x14da508
+4 RotateIncrement=12e1308x14e2a88
+
+3 ICommand
+4 Overview=12e1478x14db484
+4 Operations
+5 Do=12e1308x14d476c
+5 Undo=12e1308x14d6f30
+4 Read-only Properties
+5 Description=12e1308x14e8a7c
+
+3 ICommandDispatcher
+4 Overview=12e1478x14dc130
+4 Operations
+5 ClearHistory=12e1308x14e38d8
+5 Do=12e1308x14e5b18
+5 PeekRedo=12e1308x14d6754
+5 PeekUndo=12e1308x14d66a0
+5 Redo=12e1308x14d8250
+5 Undo=12e1308x14d8978
+4 Read-only Properties
+5 RedoCount=12e1308x14d705c
+5 UndoCount=12e1308x14dfdf4
+4 Read/Write Properties
+5 MaxHistory=12e1308x14d5ec4
+
+3 ICompositeNode
+4 Overview=12e1478x14d83f4
+4 AppendChild=12e1308x14dce18
+4 GetChild=12e1308x14d9da4
+4 GetChildByName=12e1308x14e85cc
+4 GetChildCount=12e1308x14e0828
+4 GetChildIndex=12e1308x14dd720
+4 InsertChild=12e1308x14df618
+4 OnChildUpdate=12e1308x14dffd4
+4 RemoveAllChildren=12e1308x14e3950
+4 RemoveChild=12e1308x14e3750
+
+3 IController
+4 Overview=12e1478x14d56ac
+4 Operations
+5 AttachInputDevice=12e1308x14e8264
+5 DetachInputDevice=12e1308x14e84bc
+5 GetBehavior=12e1308x14dee78
+5 MoveCamera=12e1308x14e6800
+5 RotateCamera=12e1308x14d41ac
+5 TranslateCamera=12e1308x14e5558
+5 Update=12e1308x14dc7a4
+4 Read-only Properties
+5 Model=12e1308x14d4e94
+5 SelectionList=12e1308x14dedc4
+4 Read/Write Properties
+5 CurrentState=12e1308x14e674c
+5 Viewport=12e1308x14d9190
+
+3 ICreateCommand
+4 Overview=12e1478x14e768c
+4 Operations
+5 SetNodeName=12e1308x14d8050
+5 SetNodeType=12e1308x14d5290
+5 SetParent=12e1308x14e06fc
+4 Read-only Properties
+5 Node=12e1308x14e4e6c
+
+3 ICreateShapeCommand
+4 Overview=12e1478x14d93ac
+4 SetMeshName=12e1308x14d4e1c
+
+3 IDevice
+4 Overview=12e1478x14d4a78
+4 Operations
+5 CreateViewport=12e1308x14d4044
+5 GetD3DDevice=12e1308x14ddfec
+5 GetDeviceGUID=12e1308x14e7ea4
+5 GetDisplayModeCount=12e1308x14d329c
+5 GetDisplayModeInfo=12e1308x14e8824
+5 GetMonitor=12e1308x14da79c
+5 Initialize=12e1308x14e96ec
+5 _InitObject=12e1308x14e4708
+4 Read-only Properties
+5 Build=12e1308x14e7d78
+5 DeviceId=12e1308x14de8f4
+5 DriverDesc=12e1308x14e1b0c
+5 DriverName=12e1308x14e23d8
+5 FocusWindow=12e1308x14e22ac
+5 Product=12e1308x14e82dc
+5 Revision=12e1308x14e7998
+5 SubVersion=12e1308x14e97dc
+5 SubsysId=12e1308x14e1fbc
+5 VendorId=12e1308x14d6158
+5 Version=12e1308x14d949c
+5 WHQLLevel=12e1308x14de570
+4 Read/Write Properties
+5 DisplayMode=12e1308x14e21f8
+5 DriverMode=12e1308x14e39c8
+
+3 IDeviceResource
+4 Overview=12e1478x14d7a38
+4 LoadDevice=12e1308x14d43c8
+4 UnloadDevice=12e1308x14dc72c
+
+3 IEngine
+4 Overview=12e1478x14d4a3c
+4 Operations
+5 GetD3DEngine=12e1308x14e3408
+5 GetDefaultDevice=12e1308x14da834
+5 GetDevice=12e1308x14e3480
+5 GetDeviceCount=12e1308x14e01b4
+5 GetInputDevice=12e1308x14d9c00
+5 GetInputDeviceCount=12e1308x14dc858
+5 InitializeEngine=12e1308x14d93e8
+4 Read-only Properties
+5 Direct3DVersion=12e1308x14db664
+4 Read/Write Properties
+5 InternetEnabled=12e1308x14dd46c
+5 ProxyBypass=12e1308x14e3a40
+5 ProxyName=12e1308x14e3534
+
+3 IEnumNodes
+4 Overview=12e1478x14e73d8
+4 Clone=12e1308x14dfd7c
+4 Next=12e1308x14e61c8
+4 Reset=12e1308x14db22c
+4 Skip=12e1308x14e2810
+
+3 IFaceArray
+4 Overview=12e1478x14e5c08
+4 AddFace=12e1308x14d4af0
+4 Clear=12e1308x14e4a34
+4 GetFaceCount=12e1308x14da238
+4 GetFaceIndex=12e1308x14d5c30
+4 GetFacePrimitiveIndex=12e1308x14d9b10
+
+3 IFirstPersonController
+4 Overview=12e1478x14d89f0
+4 CollisionsEnabled=12e1308x14daf00
+
+3 IGroupCommand
+4 Overview=12e1478x14d5e88
+4 SetNodeName=12e1308x14ded10
+4 SetParent=12e1308x14d8c0c
+
+3 IInputDevice
+4 Overview=12e1478x14df238
+4 Operations
+5 GetDIDevice=12e1308x14d8430
+4 Read-only Properties
+5 Axes=12e1308x14d8598
+5 Buttons=12e1308x14e16b4
+5 DeviceCategory=12e1308x14d65b0
+5 DeviceName=12e1308x14e40f0
+5 DeviceType=12e1308x14e7270
+5 FFMinTimeResolution=12e1308x14dc388
+5 FFSamplePeriod=12e1308x14da094
+5 POVs=12e1308x14d7478
+5 ProductName=12e1308x14e1768
+
+3 IInsertCommand
+4 Overview=12e1478x14e4854
+4 SetParent=12e1308x14db5ec
+
+3 IInsertDeleteNodes
+4 Overview=12e1478x14e051c
+4 CancelInsert=12e1308x14e33cc
+4 EndInsert=12e1308x14d5fb4
+4 InsertNode=12e1308x14db13c
+
+3 ILight
+4 Overview=12e1478x14d6808
+4 Operations
+5 GetAmbientColor=12e1308x14de78c
+5 GetDiffuseColor=12e1308x14d9640
+5 GetSpecularColor=12e1308x14d4440
+5 SetAmbientColor=12e1308x14d4c78
+5 SetDiffuseColor=12e1308x14e63e4
+5 SetDirection=12e1308x14e93fc
+5 SetPosition=12e1308x14d4550
+5 SetSpecularColor=12e1308x14d6a60
+4 Read/Write Properties
+5 ConstantAttenuation=12e1308x14e3ba8
+5 Enabled=12e1308x14db4c0
+5 LightIndex=12e1308x14dda68
+5 LinearAttenuation=12e1308x14d3880
+5 QuadraticAttenuation=12e1308x14e7fd0
+5 Range=12e1308x14e022c
+5 XDirection=12e1308x14dba80
+5 XPosition=12e1308x14d6fa8
+5 YDirection=12e1308x14e7a10
+5 YPosition=12e1308x14e7bb4
+5 ZDirection=12e1308x14d9e58
+5 ZPosition=12e1308x14e2998
+
+3 IMacroCommand
+4 Overview=12e1478x14e8228
+4 Operations
+5 AddCommand=12e1308x14e0cf8
+5 ClearCommands=12e1308x14df4b0
+4 Read-only Properties
+5 CommandCount=12e1308x14e3804
+
+3 IMaterial
+4 Overview=12e1478x14dfe6c
+4 GetAmbientColor=12e1308x14dfa50
+4 GetDiffuseColor=12e1308x14e4c14
+4 GetEmissiveColor=12e1308x14debc4
+4 GetSpecularColor=12e1308x14d54cc
+4 SetAmbientColor=12e1308x14d6880
+4 SetDiffuseColor=12e1308x14dbd14
+4 SetEmissiveColor=12e1308x14e2ce0
+4 SetSpecularColor=12e1308x14d9820
+
+3 IMeasurementScale
+4 Overview=12e1478x14e7df0
+4 Operations
+5 ConvertLogicalUnits=12e1308x14d3dec
+5 ConvertMeasurement=12e1308x14dd520
+4 Read/Write Properties
+5 LogicalUnits=12e1308x14d4820
+5 Measurement=12e1308x14d6be8
+5 UnitOfMeasure=12e1308x14e6eec
+
+3 IMesh
+4 Overview=12e1478x14d5814
+4 Operations
+5 AddPrimitiveFace=12e1308x14d5074
+5 AddVertex=12e1308x14dcf08
+5 AppendPrimitive=12e1308x14dd214
+5 AppendPrimitiveVertex=12e1308x14d7200
+5 ClearPrimitive=12e1308x14d4134
+5 GetPrimitiveCount=12e1308x14dbe7c
+5 GetPrimitiveFace=12e1308x14e2070
+5 GetPrimitiveFaceCount=12e1308x14e4564
+5 GetPrimitiveVertex=12e1308x14d8304
+5 GetPrimitiveVertexCount=12e1308x14e6330
+5 GetVertex=12e1308x14d5a30
+5 InsertPrimitive=12e1308x14e0990
+5 InsertPrimitiveVertex=12e1308x14e7180
+5 PickFace=12e1308x14e2e0c
+5 RemoveAllPrimitives=12e1308x14ddefc
+5 RemovePrimitive=12e1308x14dea98
+5 RemovePrimitiveFace=12e1308x14df10c
+5 RemovePrimitiveVertex=12e1308x14e25f4
+5 RemoveUnusedVertices=12e1308x14dbb34
+5 SetPrimitiveFace=12e1308x14de3ac
+5 SetPrimitiveVertex=12e1308x14dd2c8
+5 SetPrimitiveVertexRange=12e1308x14da328
+5 SetVertex=12e1308x14dd7d4
+5 UpdateVertex=12e1308x14d56e8
+5 UpdateVertexNormals=12e1308x14d78ec
+4 Read/Write Properties
+5 IndexBufferId=12e1308x14e8914
+5 VertexBufferId=12e1308x14dcb28
+
+3 IMeshEditor
+4 Overview=12e1478x14e6510
+4 AppendFace=12e1308x14d55f8
+4 AppendVertex=12e1308x14e6e38
+4 BeginEdit=12e1308x14e1da0
+4 EndEdit=12e1308x14d3bc8
+4 MakeCone=12e1308x14e430c
+4 MakeCube=12e1308x14e1e90
+4 MakeCylinder=12e1308x14e609c
+4 MakePyramid=12e1308x14df6cc
+4 MakeSphere=12e1308x14da8ac
+4 MakeTube=12e1308x14df4ec
+4 RemoveVertex=12e1308x14deb4c
+4 SelectPrimitive=12e1308x14d70d4
+4 UpdateFaceNormal=12e1308x14e43fc
+4 UpdateTextureCoordinate=12e1308x14e3660
+4 UpdateVertex=12e1308x14d9a20
+4 UpdateVertexPosition=12e1308x14d429c
+
+3 IModel
+4 Overview=12e1478x14d7f24
+4 Operations
+5 AppendNodes=12e1308x14d8e64
+5 Clear=12e1308x14d77fc
+5 CreateNode=12e1308x14e4168
+5 DeleteNode=12e1308x14e8f10
+5 DeleteNodes=12e1308x14e66d4
+5 GetAmbientLight=12e1308x14e107c
+5 GroupNodes=12e1308x14e7414
+5 InsertNode=12e1308x14d4f84
+5 LoadBSPTree=12e1308x14e7f1c
+5 LockEvents=12e1308x14e3264
+5 MoveNodes=12e1308x14db7b0
+5 RotateNodes=12e1308x14e4aac
+5 ScaleNodes=12e1308x14db8dc
+5 SetAmbientLight=12e1308x14d3f18
+5 UngroupNodes=12e1308x14dd160
+4 Read-only Properties
+5 BSPTree=12e1308x14e8408
+4 Read/Write Properties
+5 BSPTreeEnabled=12e1308x14dace4
+5 MeasurementScale=12e1308x14df8ac
+
+3 IModelReader
+4 Overview=12e1478x14e56c0
+4 Read=12e1308x14e7740
+
+3 IModelWriter
+4 Overview=12e1478x14dda2c
+4 Write=12e1308x14d338c
+
+3 IMoveCommand
+4 Overview=12e1478x14e2324
+4 SetDelta=12e1308x14dcd08
+
+3 IMoveNodes
+4 Overview=12e1478x14d891c
+4 Operations
+5 BeginMove=12e1308x14d5308
+5 CancelMove=12e1308x14e32dc
+5 EndMove=12e1308x14e5198
+4 Read/Write Properties
+5 MoveIncrement=12e1308x14e1600
+
+3 INode
+4 Overview=12e1478x14d5bb8
+4 Read-only Properties
+5 FullName=12e1308x14d9244
+5 RelativePath=12e1308x14d86c4
+5 Root=12e1308x14e1984
+4 Read/Write Properties
+5 Name=12e1308x14e6cec
+5 Parent=12e1308x14df780
+
+3 INodeCommand
+4 Overview=12e1478x14e1a94
+4 AddNode=12e1308x14dc61c
+4 AddNodes=12e1308x14e524c
+
+3 INodes
+4 Overview=12e1478x14d6844
+4 Operations
+5 Add=12e1308x14d7ccc
+5 Clear=12e1308x14e1498
+5 ContainsNode=12e1308x14e0558
+5 GetNearestNode=12e1308x14e95fc
+5 SortByDistance=12e1308x14dd0ac
+4 Read-only Properties
+5 Count=12e1308x14e31b0
+5 Item=12e1308x14daac8
+5 _NewEnum=12e1308x14e031c
+5 _NewNodeEnum=12e1308x14dabb8
+
+3 IPersistXML
+4 Overview=12e1478x14d8f18
+4 GetObjectID=12e1308x14d4ba4
+4 GetTag=12e1308x14d8f90
+4 LoadXML=12e1308x14d620c
+4 SaveXML=12e1308x14dc6b4
+
+3 IPropertyContainer
+4 Overview=12e1478x14e2360
+4 AddProperty=12e1308x14e78a8
+4 GetProperty=12e1308x14dfcc8
+4 GetPropertyId=12e1308x14da184
+4 PutProperty=12e1308x14e8d6c
+4 RemoveProperty=12e1308x14e5648
+
+3 IRenderingContext
+4 Overview=12e1478x14e4654
+4 GetRenderState=12e1308x14e05d0
+4 RemoveRenderState=12e1308x14e58c0
+4 SetRenderState=12e1308x14da6e8
+
+3 IRotateCommand
+4 Overview=12e1478x14e89c8
+4 SetAngle=12e1308x14d99a8
+4 SetAxis=12e1308x14d8d74
+
+3 IScaleCommand
+4 Overview=12e1478x14e1ad0
+4 SetScale=12e1308x14d87b4
+
+3 ISelectNodes
+4 Overview=12e1478x14e52c4
+4 MultiSelect=12e1308x14e0774
+
+3 IShape
+4 Overview=12e1478x14e5d34
+4 Operations
+5 ClearContext=12e1308x14e9168
+5 GetContext=12e1308x14e0dac
+5 SetContext=12e1308x14d7d44
+4 Read/Write Properties
+5 Mesh=12e1308x14e950c
+
+3 IShapeShifterCtl
+4 Overview=12e1478x14e7324
+4 Operations
+5 AboutBox=12e1308x14d3b8c
+5 LoadFile=12e1308x14d76d0
+5 Refresh=12e1308x14e02e0
+5 ReloadDevice=12e1308x14ded88
+4 Read-only Properties
+5 Controller=12e1308x14df058
+5 Device=12e1308x14e6a58
+5 Engine=12e1308x14e69e0
+5 Model=12e1308x14d9044
+5 Viewport=12e1308x14d9cf0
+4 Read/Write Properties
+5 AnimationEnabled=12e1308x14e03b4
+5 AnimationInterval=12e1308x14e6bc0
+5 Aspect=12e1308x14dbc24
+5 AutoAspect=12e1308x14dbfc8
+5 BackColor=12e1308x14d4910
+5 CameraAimX=12e1308x14e75d8
+5 CameraAimY=12e1308x14e74c8
+5 CameraAimZ=12e1308x14e77f4
+5 CameraLocationX=12e1308x14e8af4
+5 CameraLocationY=12e1308x14e8be4
+5 CameraLocationZ=12e1308x14e8cb8
+5 CameraUpX=12e1308x14d356c
+5 CameraUpY=12e1308x14d3628
+5 CameraUpZ=12e1308x14d3718
+5 CollisionsEnabled=12e1308x14dbf14
+5 ControllerType=12e1308x14e580c
+5 DriverMode=12e1308x14d8c84
+5 FOV=12e1308x14e401c
+5 FarPlane=12e1308x14e17e0
+5 InternetEnabled=12e1308x14d3a24
+5 ModelFile=12e1308x14e6ad0
+5 ModelReaderType=12e1308x14e1cec
+5 ModelType=12e1308x14d3934
+5 NearPlane=12e1308x14d714c
+5 ViewportType=12e1308x14dc1a8
+5 Windowed=12e1308x14d958c
+
+3 ISpotLight
+4 Overview=12e1478x14e62f4
+4 FallOff=12e1308x14e9258
+4 InnerSpotlightConeAngle=12e1308x14e4ee4
+4 OuterSpotlightConeAngle=12e1308x14dc298
+
+3 ITexture
+4 Overview=12e1478x14d4c1c
+4 FileName=12e1308x14e7090
+4 Height=12e1308x14d60a4
+4 TextureId=12e1308x14dd8c4
+4 Width=12e1308x14d7a74
+
+3 ITextureStage
+4 Overview=12e1478x14e7018
+4 Operations
+5 ClearAllTextureStates=12e1308x14e0f14
+5 ClearTextureState=12e1308x14de5e8
+5 SetTextureState=12e1308x14db358
+5 SetTextureStateFloat=12e1308x14db2a4
+5 SetTextureStateRGBA=12e1308x14d9f0c
+4 Read/Write Properties
+5 StageNum=12e1308x14d8aa4
+5 Texture=12e1308x14e47bc
+
+3 IUngroupCommand
+4 Overview=12e1478x14d9118
+4 SetNodeName=12e1308x14d6628
+
+3 IViewport
+4 Overview=12e1478x14d996c
+4 Operations
+5 DistanceToPoint=12e1308x14ddd58
+5 DrawTracking=12e1308x14da2b0
+5 GetBackgroundColor=12e1308x14e8fc4
+5 GetFrustum=12e1308x14e3cd4
+5 Invalidate=12e1308x14dce90
+5 RefreshScreen=12e1308x14e0a44
+5 Render=12e1308x14db448
+5 ScreenToWorld=12e1308x14e8084
+5 SetBackgroundColor=12e1308x14dc9c0
+5 SetFrustum=12e1308x14dad98
+5 SetSelectionList=12e1308x14d4da4
+5 WorldToScreen=12e1308x14d6e40
+5 _InitObject=12e1308x14df274
+4 Read-only Properties
+5 Device=12e1308x14e7f58
+4 Read/Write Properties
+5 Camera=12e1308x14e5a64
+5 ContainerWindow=12e1308x14e3318
+5 Context=12e1308x14ddc48
+5 InvalidateWindow=12e1308x14e08dc
+5 Model=12e1308x14e5300
+5 Windowed=12e1308x14d761c
+
+3 IVisual
+4 Overview=12e1478x14e3914
+4 Operations
+5 GetAxes=12e1308x14e654c
+5 GetBoundingBox=12e1308x14e4fb8
+5 GetBoundingSphere=12e1308x14d864c
+5 GetChildrenIntersectingBox=12e1308x14e0b54
+5 GetChildrenIntersectingPlane=12e1308x14dd630
+5 GetChildrenIntersectingRay=12e1308x14e248c
+5 GetChildrenIntersectingSphere=12e1308x14da5f8
+5 GetOrigin=12e1308x14e76c8
+5 HitTestBox=12e1308x14dd978
+5 HitTestPlane=12e1308x14d6d50
+5 HitTestRay=12e1308x14de660
+5 HitTestSphere=12e1308x14d7e70
+5 PopTransform=12e1308x14defa4
+5 PushTransform=12e1308x14de8b8
+5 Rotate=12e1308x14df364
+5 Scale=12e1308x14e4944
+5 SetBoundingBox=12e1308x14e9764
+5 SetStyleFlags=12e1308x14d37cc
+5 TestStyleFlags=12e1308x14d5dd4
+5 Translate=12e1308x14de244
+4 Read-only Properties
+5 Back=12e1308x14d88a4
+5 Bottom=12e1308x14d58c8
+5 Front=12e1308x14dac30
+5 Left=12e1308x14d7838
+5 OriginX=12e1308x14e3028
+5 OriginY=12e1308x14e30a0
+5 OriginZ=12e1308x14e3138
+5 Radius=12e1308x14e0684
+5 Right=12e1308x14e2900
+5 Top=12e1308x14e1588
+4 Read/Write Properties
+5 Visible=12e1308x14d3c04
+
+3 IVisual2D
+4 Overview=12e1478x14d3440
+4 Operations
+5 SetBounds=12e1308x14e3c5c
+4 Read/Write Properties
+5 Height=12e1308x14d8b58
+5 Left=12e1308x14da454
+5 Top=12e1308x14e0100
+5 Width=12e1308x14de9a8
+
+3 IWndMessageReceiver
+4 Overview=12e1478x14e08a0
+4 ProcessWindowMessage=12e1308x14e8e20
+
+3 IWndMessageSource
+4 Overview=12e1478x14dfea8
+4 AddReceiver=12e1308x14d7748
+4 Connect=12e1308x14d69ac
+4 Disconnect=12e1308x14e6024
+4 RemoveReceiver=12e1308x14d49c4
+4 SendWindowMessage=12e1308x14d64c0
+
+3 IXMLArchive
+4 Overview=12e1478x14e6060
+4 Operations
+5 Clear=12e1308x14dcecc
+5 CompareCurrentTag=12e1308x14d640c
+5 CreateElement=12e1308x14d7964
+5 FreeContext=12e1308x14d9730
+5 GetContext=12e1308x14e0088
+5 GotoFirstChild=12e1308x14dc948
+5 GotoNextSibling=12e1308x14e2450
+5 GotoNode=12e1308x14ddb58
+5 GotoNodeByID=12e1308x14e5c44
+5 GotoParent=12e1308x14d7c90
+5 GotoPreviousSibling=12e1308x14deb10
+5 Load=12e1308x14e4df4
+5 ReadAttribute=12e1308x14e5d70
+5 ReadElement=12e1308x14e2c2c
+5 ReadObject=12e1308x14dcff8
+5 ReadObjectReference=12e1308x14daa50
+5 ReadObjectValue=12e1308x14def2c
+5 Save=12e1308x14e0a80
+5 SetContext=12e1308x14d6b70
+5 WriteAttribute=12e1308x14d92bc
+5 WriteElement=12e1308x14da99c
+5 WriteObject=12e1308x14e14d4
+5 WriteObjectReference=12e1308x14e1c74
+5 WriteObjectValue=12e1308x14da10c
+4 Read-only Properties
+5 DOMDocument=12e1308x14db574
+4 Read/Write Properties
+5 CurrentNode=12e1308x14d62c0
+5 Namespace=12e1308x14e0f50
+
+2 ShapeShifter
+3 Overview=12e1478x14e4528
+3 Data Members
+4 BOX3D=12e1308x14d8d38
+4 LINE3D=12e1308x14df2ec
+4 PLANE3D=12e1308x14e1bc0
+4 POINT3D=12e1308x14dfc14
+4 QUAD3D=12e1308x14d4f0c
+4 SPHERE3D=12e1308x14e5938
+4 TEXTURECOORDINATE3D=12e1308x14e6cb0
+4 TRIANGLE3D=12e1308x14e739c
+4 VECTOR3D=12e1308x14d3b14
+3 COM Classes
+4 AnimationLoop=12e1478x14dafd4
+4 AxisGuide=12e1478x14e4618
+4 BSPTree=12e1478x14e8a40
+4 BehaviorPropPage=12e1478x14dfc8c
+4 BrowseController=12e1478x14ddf74
+4 BrowseEditController=12e1478x14dde84
+4 Camera=12e1478x14d3224
+4 CameraFly=12e1478x14dd124
+4 CameraStep=12e1478x14e3e00
+4 CompositeShape=12e1478x14d9460
+4 CreateShapeCommand=12e1478x14db1f0
+4 DeleteCommand=12e1478x14d3b50
+4 Device=12e1478x14d5490
+4 DirectionalLight=12e1478x14e5b90
+4 DragDrop=12e1478x14e4a70
+4 Engine=12e1478x14d5454
+4 EnumNodeList=12e1478x14e19fc
+4 EnumVariantNodeList=12e1478x14d8104
+4 FaceArray=12e1478x14e7054
+4 FlightController=12e1478x14d5d20
+4 GeneralPropPage=12e1478x14d7c54
+4 Group=12e1478x14d9d68
+4 GroupCommand=12e1478x14d9154
+4 InputDevice=12e1478x14d770c
+4 InsertCommand=12e1478x14e48cc
+4 InsertDeleteNodes=12e1478x14d5ce4
+4 MacroCommand=12e1478x14ddec0
+4 Material=12e1478x14d3edc
+4 MeasurementScale=12e1478x14d90bc
+4 Mesh=12e1478x14d78b0
+4 MeshEditor=12e1478x14e172c
+4 Model=12e1478x14dc16c
+4 ModelReader3DS=12e1478x14df870
+4 ModelReaderDXF=12e1478x14e7144
+4 ModelReaderXML=12e1478x14e87ac
+4 ModelWriterXML=12e1478x14ddf38
+4 MouseSelect=12e1478x14da5bc
+4 MoveCommand=12e1478x14e4690
+4 Namespace=12e1478x14e930c
+4 NodeList=12e1478x14d8a2c
+4 PointLight=12e1478x14d7bdc
+4 PrelitMesh=12e1478x14e3af4
+4 RenderingContext=12e1478x14e1bfc
+4 RotateCommand=12e1478x14d8a68
+4 ScaleCommand=12e1478x14db774
+4 Shape=12e1478x14d80c8
+4 ShapeShifterCtl=12e1478x14d9370
+4 SpotLight=12e1478x14e42d0
+4 Texture=12e1478x14d5f78
+4 TextureStage=12e1478x14d7ba0
+4 Tracker=12e1478x14d7c18
+4 TypesPropPage=12e1478x14e6ddc
+4 UngroupCommand=12e1478x14d59f4
+4 ViewPropPage=12e1478x14dbe40
+4 Viewport=12e1478x14e7360
+4 WndMessageSource=12e1478x14e3b30
+4 XMLArchive=12e1478x14d8140
+3 DispInterfaces
+4 _IControllerEvents
+5 Overview=12e1478x14e4294
+5 OnAnimate=12e1308x14d5940
+5 OnNodeClick=12e1308x14d7b28
+5 OnNodeDblClick=12e1308x14e8734
+5 OnSelectionChange=12e1308x14dcbdc
+4 _IModelEvents
+5 Overview=12e1478x14dee3c
+5 OnAddNode=12e1308x14db6dc
+5 OnMoveNode=12e1308x14e0468
+5 OnRemoveNode=12e1308x14e8554
+4 _IShapeShifterCtlEvents
+5 Overview=12e1478x14e3b6c
+5 OnSelectionChange=12e1308x14e51d4
+3 Type Definitions
+4 DISPLAYMODEINFO=12e1308x14e91e0
+2 Type Libraries
+2 Type Definitions
+3 CameraMovement=12e1308x14de334
+3 DeviceResourceId=12e1308x14e4890
+3 DriverMode=12e1308x14e618c
+3 FaceCount=12e1308x14e912c
+3 FaceIndex=12e1308x14e4d7c
+3 HitTestStrategy=12e1308x14dc43c
+3 InputDeviceCategory=12e1308x14d5b20
+3 LPVALUE3D=12e1308x14e90f0
+3 PrimitiveCount=12e1308x14d6e04
+3 PrimitiveIndex=12e1308x14d5b5c
+3 PrimitiveType=12e1308x14dc0b8
+3 RenderStateType=12e1308x14d5ff0
+3 TextureAddress=12e1308x14dbb70
+3 TextureFilter=12e1308x14e1040
+3 TextureStageStateType=12e1308x14de87c
+3 UnitOfMeasure=12e1308x14dba08
+3 VALUE3D=12e1308x14d81d8
+3 VertexCount=12e1308x14e1004
+3 VertexField=12e1308x14dff5c
+3 VertexHandle=12e1308x14de96c
+3 VertexIndex=12e1308x14e145c
+3 VertexNormalAlgorithm=12e1308x14dc25c

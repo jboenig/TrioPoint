@@ -1,0 +1,204 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>ShapeShifter Demo</title>
+</head>
+
+<body>
+
+<div align="left">
+  <table border="1" width="600" bordercolor="#C0C0C0">
+    <tr>
+      <td bgcolor="#C0C0C0">
+        <p align="center"><font face="Arial" size="3"><b>ShapeShifter Textured
+        Cubes Web Demo</b></font></td>
+    </tr>
+    <tr>
+      <td>
+<object classid="clsid:8DA02F49-0B29-4EC1-8BDE-783F2CB9E39B" id="ShapeShifterCtl1" width="590" height="495">
+<param name="_cx" value="15716">
+<param name="_cy" value="14896">
+<param name="BackColor" value="16711680">
+<param name="ModelType" value="ShapeShifter.Model">
+<param name="ViewportType" value="ShapeShifter.WindowedViewport">
+<param name="ControllerType" value="ShapeShifter.BrowseController">
+<param name="ModelFile" value>
+<param name="ModelReaderType" value="ShapeShifter.ModelReaderXML">
+<param name="FOV" value="1.57">
+<param name="NearPlane" value="0.1">
+<param name="FarPlane" value="1000">
+<param name="AnimationInterval" value="0">
+<param name="AnimationEnabled" value="0">
+<param name="InternetEnabled" value="0">
+</object>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <p align="center">Texture Source: <input type="text" name="TextureSrc" size="50"><input type="button" value="Load" name="LoadTexture"></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <p align="center">Selected Object: <input type="text" name="SelectedObj" size="32" disabled="true">
+      </td>
+    </tr>
+  </table>
+</div>
+<p>
+&nbsp;
+</p>
+
+<SCRIPT LANGUAGE="VBScript">
+<!--
+Sub window_onLoad
+	Dim Model
+	Dim MeshEditor
+	Dim CubeMesh
+	Dim CubeShape
+	Dim CubeMaterial
+	Dim TextureStage
+	Dim RenderingContext
+	Dim N
+
+	'
+	' Load text box with the URL of the default texture
+	'
+	TextureSrc.value = "brkgrnredstain.jpg"
+  
+	'
+	' Get reference to model in the control for convenience
+	'  
+    Set Model = ShapeShifterCtl1.Model
+    
+	'
+	' Create a mesh editor
+	'
+	Set MeshEditor = CreateObject("ShapeShifter.MeshEditor")
+    
+	'
+	' Create a mesh and configure it as a cube
+	'
+	Set CubeMesh = Model.CreateNode("Cube Mesh", "ShapeShifter.Mesh", "")
+	MeshEditor.BeginEdit CubeMesh
+	MeshEditor.MakeCube 3, 3, 3
+	SetCubeTextureCoordinates MeshEditor, 1, 1
+	MeshEditor.EndEdit
+        
+	'
+	' Create and initialize a material
+	'
+	Set CubeMaterial = Model.CreateNode("Cube Material", "ShapeShifter.Material", "")
+	CubeMaterial.SetDiffuseColor 1, 1, 1, 1
+	CubeMaterial.SetAmbientColor 1, 1, 1, 1
+	CubeMaterial.SetSpecularColor 1, 1, 1, 1
+	CubeMaterial.SetEmissiveColor 1, 1, 1, 1
+    
+	'
+	' Create and initialize a texture stage
+	'
+	Set TextureStage = Model.CreateNode("Cube Texture", "ShapeShifter.TextureStage", "")
+	TextureStage.MagFilter = SSCLTEXF_LINEAR
+	TextureStage.Texture.FileName = TextureSrc.value
+	    
+	'
+	' Create a rendering context
+	'
+	Set RenderingContext = Model.CreateNode("Cube Context", "ShapeShifter.RenderingContext", "")
+	RenderingContext.AppendChild CubeMaterial
+	RenderingContext.AppendChild TextureStage
+    
+	'
+	' Create first shape
+	'
+	Set CubeShape = Model.CreateNode("Center Cube", "ShapeShifter.Shape", "")
+	Set CubeShape.Mesh = CubeMesh
+	CubeShape.SetContext 0, RenderingContext
+    
+	'
+	' Create shapes on left side of the center cube
+	'
+	For N = 1 To 4 Step 1
+		Set CubeShape = Model.CreateNode("Left Cube " + FormatNumber(N,0), "ShapeShifter.Shape", "")
+		Set CubeShape.Mesh = CubeMesh
+		CubeShape.Translate -N * 10, 0, 0
+		CubeShape.SetContext 0, RenderingContext
+	Next
+	
+	'
+	' Create shapes on right side of the center cube
+	'
+	For N = 1 To 4 Step 1
+		Set CubeShape = Model.CreateNode("Right Cube " + FormatNumber(N,0), "ShapeShifter.Shape", "")
+		Set CubeShape.Mesh = CubeMesh
+		CubeShape.Translate N * 10, 0, 0
+		CubeShape.SetContext 0, RenderingContext
+	Next
+
+	ShapeShifterCtl1.ReloadDevice
+
+End Sub
+
+Private Sub SetCubeTextureCoordinates(MeshEditor, MaxU, MaxV)
+	MeshEditor.UpdateTextureCoordinate 0, 0, MaxV
+	MeshEditor.UpdateTextureCoordinate 1, 0, 0
+	MeshEditor.UpdateTextureCoordinate 2, MaxU, MaxV
+	MeshEditor.UpdateTextureCoordinate 3, MaxU, MaxV
+	MeshEditor.UpdateTextureCoordinate 4, 0, 0
+	MeshEditor.UpdateTextureCoordinate 5, MaxU, 0
+
+	MeshEditor.UpdateTextureCoordinate 6, 0, MaxV
+	MeshEditor.UpdateTextureCoordinate 7, 0, 0
+	MeshEditor.UpdateTextureCoordinate 8, MaxU, MaxV
+	MeshEditor.UpdateTextureCoordinate 9, MaxU, MaxV
+	MeshEditor.UpdateTextureCoordinate 10, 0, 0
+	MeshEditor.UpdateTextureCoordinate 11, MaxU, 0
+
+	MeshEditor.UpdateTextureCoordinate 12, 0, MaxV
+	MeshEditor.UpdateTextureCoordinate 13, 0, 0
+	MeshEditor.UpdateTextureCoordinate 14, MaxU, MaxV
+	MeshEditor.UpdateTextureCoordinate 15, MaxU, MaxV
+	MeshEditor.UpdateTextureCoordinate 16, 0, 0
+	MeshEditor.UpdateTextureCoordinate 17, MaxU, 0
+    
+	MeshEditor.UpdateTextureCoordinate 18, 0, MaxV
+	MeshEditor.UpdateTextureCoordinate 19, 0, 0
+	MeshEditor.UpdateTextureCoordinate 20, MaxU, MaxV
+	MeshEditor.UpdateTextureCoordinate 21, MaxU, MaxV
+	MeshEditor.UpdateTextureCoordinate 22, 0, 0
+	MeshEditor.UpdateTextureCoordinate 23, MaxU, 0
+End Sub
+
+Private Sub LoadTexture_OnClick
+	Dim Model
+	Dim Texture
+	
+	Set Model = ShapeShifterCtl1.Model
+	Set Texture = Model.GetChildByName("Cube Texture.Texture")
+	Texture.FileName = TextureSrc.value
+	Texture.UnloadDevice ShapeShifterCtl1.Device
+	Texture.LoadDevice ShapeShifterCtl1.Device
+	ShapeShifterCtl1.Viewport.Render
+	ShapeShifterCtl1.Viewport.RefreshScreen
+End Sub
+
+Private Sub ShapeShifterCtl1_OnSelectionChange(SelectionList)
+	If (SelectionList.Count > 0) Then
+		SelectedObj.value = SelectionList(1).Name
+	Else
+		SelectedObj.value = ""
+	End If
+End Sub
+
+-->
+</SCRIPT>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

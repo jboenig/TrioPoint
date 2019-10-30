@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.PrelitMesh.1 = s 'PrelitMesh Class'
+	{
+		CLSID = s '{85BDA184-898C-48f5-83C9-0ABC9999CFB6}'
+	}
+	ShapeShifter.PrelitMesh = s 'PrelitMesh Class'
+	{
+		CLSID = s '{85BDA184-898C-48f5-83C9-0ABC9999CFB6}'
+		CurVer = s 'ShapeShifter.PrelitMesh.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {85BDA184-898C-48f5-83C9-0ABC9999CFB6} = s 'PrelitMesh Class'
+		{
+			ProgID = s 'ShapeShifter.PrelitMesh.1'
+			VersionIndependentProgID = s 'ShapeShifter.PrelitMesh'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingPrelitMesh = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.BrowseController.1 = s 'BrowseController Class'
+	{
+		CLSID = s '{28FEF787-075B-4bc3-8C57-37BD40241DA4}'
+	}
+	ShapeShifter.BrowseController = s 'BrowseController Class'
+	{
+		CLSID = s '{28FEF787-075B-4bc3-8C57-37BD40241DA4}'
+		CurVer = s 'ShapeShifter.BrowseController.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {28FEF787-075B-4bc3-8C57-37BD40241DA4} = s 'BrowseController Class'
+		{
+			ProgID = s 'ShapeShifter.BrowseController.1'
+			VersionIndependentProgID = s 'ShapeShifter.BrowseController'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingBrowseController = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.ModelReaderDXF.1 = s 'ModelReaderDXF Class'
+	{
+		CLSID = s '{389A46C9-EE2F-4640-80E7-8A2578BE57CA}'
+	}
+	ShapeShifter.ModelReaderDXF = s 'ModelReaderDXF Class'
+	{
+		CLSID = s '{389A46C9-EE2F-4640-80E7-8A2578BE57CA}'
+		CurVer = s 'ShapeShifter.ModelReaderDXF.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {389A46C9-EE2F-4640-80E7-8A2578BE57CA} = s 'ModelReaderDXF Class'
+		{
+			ProgID = s 'ShapeShifter.ModelReaderDXF.1'
+			VersionIndependentProgID = s 'ShapeShifter.ModelReaderDXF'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModelReaderDXF = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

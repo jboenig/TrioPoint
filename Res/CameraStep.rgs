@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.CameraStep.1 = s 'CameraStep Class'
+	{
+		CLSID = s '{C73CDCF2-E94F-4388-BBB3-D95D659FE19F}'
+	}
+	ShapeShifter.CameraStep = s 'CameraStep Class'
+	{
+		CLSID = s '{C73CDCF2-E94F-4388-BBB3-D95D659FE19F}'
+		CurVer = s 'ShapeShifter.CameraStep.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C73CDCF2-E94F-4388-BBB3-D95D659FE19F} = s 'CameraStep Class'
+		{
+			ProgID = s 'ShapeShifter.CameraStep.1'
+			VersionIndependentProgID = s 'ShapeShifter.CameraStep'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingCameraStep = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

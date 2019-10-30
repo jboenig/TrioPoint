@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.ModelWriterXML.1 = s 'ModelWriterXML Class'
+	{
+		CLSID = s '{37C15623-478D-4871-8107-2E51DCAAD3C7}'
+	}
+	ShapeShifter.ModelWriterXML = s 'ModelWriterXML Class'
+	{
+		CLSID = s '{37C15623-478D-4871-8107-2E51DCAAD3C7}'
+		CurVer = s 'ShapeShifter.ModelWriterXML.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {37C15623-478D-4871-8107-2E51DCAAD3C7} = s 'ModelWriterXML Class'
+		{
+			ProgID = s 'ShapeShifter.ModelWriterXML.1'
+			VersionIndependentProgID = s 'ShapeShifter.ModelWriterXML'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModelWriterXML = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

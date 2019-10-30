@@ -1,0 +1,26 @@
+HKCR
+{
+	ShapeShifter.EnumVariantNodeList.1 = s 'EnumVariantNodeList Class'
+	{
+		CLSID = s '{1F6835D0-FF45-4af1-87BB-C21B5B606EAB}'
+	}
+	ShapeShifter.EnumVariantNodeList = s 'EnumVariantNodeList Class'
+	{
+		CLSID = s '{1F6835D0-FF45-4af1-87BB-C21B5B606EAB}'
+		CurVer = s 'ShapeShifter.EnumVariantNodeList.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1F6835D0-FF45-4af1-87BB-C21B5B606EAB} = s 'EnumVariantNodeList Class'
+		{
+			ProgID = s 'ShapeShifter.EnumVariantNodeList.1'
+			VersionIndependentProgID = s 'ShapeShifter.EnumVariantNodeList'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

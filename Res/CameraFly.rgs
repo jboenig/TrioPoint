@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.CameraFly.1 = s 'CameraFly Class'
+	{
+		CLSID = s '{C2822E0A-44EE-4201-BD03-2D4D12D692D6}'
+	}
+	ShapeShifter.CameraFly = s 'CameraFly Class'
+	{
+		CLSID = s '{C2822E0A-44EE-4201-BD03-2D4D12D692D6}'
+		CurVer = s 'ShapeShifter.CameraFly.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C2822E0A-44EE-4201-BD03-2D4D12D692D6} = s 'CameraFly Class'
+		{
+			ProgID = s 'ShapeShifter.CameraFly.1'
+			VersionIndependentProgID = s 'ShapeShifter.CameraFly'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingCameraFly = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}

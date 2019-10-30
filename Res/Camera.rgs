@@ -1,0 +1,25 @@
+HKCR
+{
+	ShapeShifter.Camera.1 = s 'Camera Class'
+	{
+		CLSID = s '{AB21CE97-3FAC-4c7b-8DF5-FD54CE5F71A7}'
+	}
+	ShapeShifter.Camera = s 'Camera Class'
+	{
+		CLSID = s '{AB21CE97-3FAC-4c7b-8DF5-FD54CE5F71A7}'
+		CurVer = s 'ShapeShifter.Camera.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AB21CE97-3FAC-4c7b-8DF5-FD54CE5F71A7} = s 'Camera Class'
+		{
+			ProgID = s 'ShapeShifter.Camera.1'
+			VersionIndependentProgID = s 'ShapeShifter.Camera'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingCamera = s 'Apartment'
+			}
+			'TypeLib' = s '{D72BD7D1-5F7C-41b4-ADD0-36EF7878440B}'
+		}
+	}
+}
